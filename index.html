@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="robots" content="index, follow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	 <!--Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<title>HTML5 Pak Raden Jump!!</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!-- All margins and padding must be zero for the canvas to fill the screen. -->
+</head>
+<body>
+	   <div class="container">    
+		<canvas id="canvas">
+		Aww, Sorry your browser doesn't support HTML5!
+		</canvas>
+		<div id="mainMenu">
+			<h1>Pak Raden Jump!!</h1>
+			<img src="images/icon.png" height="50" width="50" alt="Pak Raden">
+			<h2><font color="white">[[ HTML5 Game]]</font></h2>
+			<h2><font color="white">Credit by</font></h2>
+			<h2><a href="http://twitter.com/maulanamaliki8/" target="_blank">Maulana Malik Ibrahim</a></h2>
+			<h2><font color="white">Game Template by  </font><br><a href="http://twitter.com/solitarydesigns" target="_blank">Kushagra Agarwal</a></h2>
+			<h2><font color="white">Music Supported by </font><br><a href="https://soundcloud.com/ahmad-ramadani/muse-starlight-angklung" target="_blank">Ahmad Ramadani</a></h2>
+			<audio id="muse" autoplay controls="controls" loop>
+				<source src="audio/muse.ogg" type="audio/ogg">
+				<source src="audio/muse.mp3" type="audio/mp3">
+				Your browser does not support the audio element.
+			</audio>
+			<script>
+			mySound=document.getElementById("muse");
+			mySound.volume=0.4;
+			</script> 
+			<p class="info">
+			Gunakan
+			<span class="key left">←</span>&nbsp
+			<span class="key right">→</span>
+			untuk Bergerak dan  Space untuk <br>Restart...<br>
+			
+			</p>
+			<a class="button" href="javascript:init()">Play</a>
+			
+		</div>
+		<div id="gameOverMenu">
+			<h1>Game Over!</h1>
+			<h3 id="go_score">Poin kamu adalah 0 poin</h3>
+			<img src="images/icon.png" height="50" width="50" alt="Pak Raden">
+			<a class="button" href="javascript:reset()">Restart</a>
+			<a id="tweetBtn" target="_blank" class="button tweet"  href="#">Tweet score </a>
+			<a id="fbBtn" target="_blank" class="button fb" href="#">Post on FB</a>
+			
+		</div>
+		<!-- Preloading image ;) -->
+		<div class="sprite">
+			<img id="sprite" src="images/tile.png"/>				
+		</div>
+		<div id="scoreBoard">
+			<p>
+			<span id="score">Score 0</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span id="level">Level 1</span>
+			</p> 
+		</div>
+    </div>
+<!-- Scripts -->
+	<script src="js/main.js"></script>
+	     
+</body>
+</html>
